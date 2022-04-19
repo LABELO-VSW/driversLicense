@@ -64,7 +64,6 @@ h1{
 }
 
 .pagina {
-    min-height: 80vh;
     margin-top: 150px;
 }
 .pagina:not([style*='visibility: visible;']){
