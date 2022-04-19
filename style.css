@@ -1,0 +1,162 @@
+:root{
+    --home-page: black;
+    --ensaios-bg: RGB(210, 105, 30);
+    /* --ensaios-text: RGB(255, 224, 102); */ 
+    --equipamentos-bg: RGB(21, 55, 130);
+    /* --equipamentos-text: RGB(219, 162, 39); */
+    --prog-bg: RGB(0, 104, 0);
+    /* --prog-text: RGB(177, 238, 175); */
+    --set-bg: RGB(86, 61, 124);
+    /* --set-text: rgba(254, 228, 255, 0.863); */
+    --text: white;
+}
+
+*{
+    font-family: monospace;
+}
+.introduction{
+    font-size: 15pt;
+    text-align: justify;
+    text-indent: 20px;
+
+}
+
+
+h1{
+    text-align: center;
+    font-size: 36pt;
+    font-weight: bold;
+    width: 100vw;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    top:0
+}
+
+.header{
+    width: 100%;
+}
+
+.himg{
+    position: absolute;
+    top: 35px;
+    cursor: pointer;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+
+.card-title{
+    padding: 0px !important;
+    width: 100%;
+    padding: 5px !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body{
+    padding: 5px 10px 15px 10px;
+    text-align: justify;
+}
+
+.pagina:not([style*='visibility: collapse;']){
+    min-height: 100vh;
+    margin-top: 150px;
+}
+.pagina[style*='visibility: collapse;']{
+    height: 0px !important;
+}
+
+.EnsaiosTitle{
+    background: var(--ensaios-bg);
+    color: var(--text);
+}
+
+.EquipsTitle{
+    color: var(--text);
+    background: RGB(21, 55, 130);
+}
+
+.ProgTitle{
+    background-color: var(--prog-bg);
+    color: var(--text);
+    border: 1 solid black;
+}
+
+.SetoresTitle{
+    background: RGB(86, 61, 124);
+    color: var(--text);
+}
+
+.GlossarioTitle{
+    background: rgba(0, 38, 124, 0.9);
+    color: whitesmoke !important;
+}
+
+.card{
+    height: 150px;
+}
+
+.table{
+    width: 100%;
+    
+}
+
+.table tr, .table td, .table th{
+    padding: 5px;
+    text-align: left !important;
+}
+.table tr td{
+    font-size: 12pt;
+}
+
+.table tr th{
+    font-size: 16pt !important;
+}
+
+.table{
+    border-collapse: collapse;
+}
+
+
+
+.table tr:nth-child(odd) td{
+    background-color: RGB(216, 222, 233);
+}
+
+.table-ensaios tr th{
+    background-color: var(--ensaios-bg);
+    color: var(--ensaios-text);
+}
+
+.table-equipamentos tr th{
+    background-color: var(--equipamentos-bg);
+    color: var(--equipamentos-text);
+}
+
+.table-programacao tr th{
+    background-color: var(--prog-bg);
+    color: var(--prog-text);
+}
+
+.table-setores tr th{
+    background-color: var(--set-bg);
+    color: var(--set-text);
+}
+
+.footer img{
+    width: 50px;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+
+.table-equipamentos{
+    width: 100%;
+    
+}
+
