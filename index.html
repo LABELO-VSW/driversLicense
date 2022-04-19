@@ -25,8 +25,8 @@
 
     <script>
       $.get('./Ensaios.csv', (success) => { // Ensaios
-          let data = csvToHTML(success, "table table-ensaios")
-          document.getElementById('quentura').innerHTML += data
+          let data = csvToHTML(success, "table table-ensaios");
+          document.getElementById('quentura').innerHTML += data;
       })
 
       $.get('./Equipamentos.csv', (success) => { // Equipamentos
@@ -43,6 +43,7 @@
       })
 
       function csvToHTML(csv, c) {
+          console.log(csv)
           return `<table class="${c}">${csv.split('\r\n').map((e, i) => {
               if (i > 0) {
                   let td = e.split(';')
