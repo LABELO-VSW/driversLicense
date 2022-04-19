@@ -16,19 +16,19 @@
     <title>Glossário de VSW</title>
 
     <script>
-        $.get('./test.csv', (success) => { // Ensaios 
+        $.get('./Ensaios.csv', (success) => { // Ensaios 
             let data = csvToHTML(success, "table table-ensaios")
             document.getElementById('quentura').innerHTML += data
         })
-        $.get('/test2.csv', (success) => { // Equipamentos 
+        $.get('./Equipamentos.csv', (success) => { // Equipamentos 
             let data = csvToHTML(success, "table table-equipamentos")
             document.getElementById('quentura2').innerHTML += data
         })
-        $.get('/test3.csv', (success) => { // Programação
+        $.get('./Programação.csv', (success) => { // Programação
             let data = csvToHTML(success, "table table-programacao")
             document.getElementById('quentura3').innerHTML += data
         })
-        $.get('/test4.csv', (success) => { //Setores
+        $.get('./Setores.csv', (success) => { //Setores
             let data = csvToHTML(success, "table table-setores")
             document.getElementById('quentura4').innerHTML += data
         })
