@@ -12,7 +12,7 @@
 }
 
 *{
-    font-family: monospace;
+    font-family: monospace !important;
 }
 .introduction{
     font-size: 15pt;
