@@ -130,22 +130,22 @@ h1{
 
 .table-ensaios tr th{
     background-color: var(--ensaios-bg);
-    color: var(--ensaios-text);
+    color: var(--text);
 }
 
 .table-equipamentos tr th{
     background-color: var(--equipamentos-bg);
-    color: var(--equipamentos-text);
+    color: var(--text);
 }
 
 .table-programacao tr th{
     background-color: var(--prog-bg);
-    color: var(--prog-text);
+    color: var(--text);
 }
 
 .table-setores tr th{
     background-color: var(--set-bg);
-    color: var(--set-text);
+    color: var(--text);
 }
 
 .footer img{
