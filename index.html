@@ -21,6 +21,7 @@
             document.getElementById('quentura').innerHTML += data
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
         $.get('./Equipamentos.csv', (success) => { // Equipamentos 
             let data = csvToHTML(success, "table table-equipamentos")
             document.getElementById('quentura2').innerHTML += data
@@ -30,6 +31,17 @@
             document.getElementById('quentura3').innerHTML += data
         })
         $.get('./Setores.csv', (success) => { //Setores
+=======
+        $.get('./test2.csv', (success) => { // Equipamentos 
+            let data = csvToHTML(success, "table table-equipamentos")
+            document.getElementById('quentura2').innerHTML += data
+        })
+        $.get('./test3.csv', (success) => { // Programação
+            let data = csvToHTML(success, "table table-programacao")
+            document.getElementById('quentura3').innerHTML += data
+        })
+        $.get('./test4.csv', (success) => { //Setores
+>>>>>>> bc8c261fe89803c6a755960d79d635aa8b04a96f
 =======
         $.get('./test2.csv', (success) => { // Equipamentos 
             let data = csvToHTML(success, "table table-equipamentos")
