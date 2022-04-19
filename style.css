@@ -67,10 +67,10 @@ h1{
     min-height: 100vh;
     margin-top: 150px;
 }
-.pagina[style*='visibility: collapse;']{
+.pagina:not([style*='visibility: visible;']){
     height: 0px !important;
-    min-height: 0px;
-    margin-top: 0px;
+    min-height: 0px !important;
+    margin-top: 0px !important;
 
 }
 
