@@ -1,7 +1,2 @@
-Palavra,Descrição
-Versão,Descrição versão
-Integridade,
-Buffer Overflow,
-Comandos,
-Calibração na bancada,
-Infração,
+Palavra;Descrição
+Versão;Descrição versão
