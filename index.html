@@ -44,7 +44,7 @@
 
       function csvToHTML(csv, c) {
           console.log(csv)
-          return `<table class="${c}">${csv.split('\n').map((e, i) => {
+          return `<table class="${c}">${csv.split('\n').filter(e=>e!=="").map((e, i) => {
               if (i > 0) {
                   let td = e.split(';')
                   if (td.length > 2) {
