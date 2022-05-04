@@ -1,3 +1,3 @@
 Palavra;Descrição
 RS-232;Padrão de transmissão de dados seriais.Cabo cujos pinos normalmente utilizados pelo laboratório são: pino 2 (Recebimento de dados), pino 3 (envio de dados) e pino 5 (GND). 
-RS-485;Padrão de transmissão de dados seriais.Cabo cujos pinos normalmente utilizados pelo laboratório são: A (nível alto de tensão, ou seja, 1), B (nível baixo de tensão, ou seja, 0)
+RS-485;Padrão de transmissão de dados seriais.Cabo cujos pinos normalmente utilizados pelo laboratório são: A (nível alto de tensão, ou, em lógica booleana, 1), B (nível baixo de tensão, ou, em lógica booleana, 0)
