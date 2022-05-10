@@ -1,5 +1,6 @@
 Palavra;Descrição
-ClickUP;Plataforma em que organizamos os ensaios ativos e processos que estão em desenvolvimento.
-GitHub;Plataforma onde compartilhamos os códigos que estamos desenvolvelvendo. 
-VScode;Software que utilizamos para progrmar.
-Extensão "VSW Essentials";Extensão no VScode que possui as principais configurações que utilizamos para programar.
+ClickUP;Plataforma em que organizamos os ensaios ativos e processos que estão em desenvolvimento.;https://clickup.com/
+GitHub;Plataforma onde compartilhamos os códigos que estamos desenvolvelvendo. ;https://github.com/
+VScode;Editor de texto. Software que utilizamos para programar e registrar resultados de ensaio.;https://code.visualstudio.com/
+Extensão "VSW Essentials";Extensão no VScode que possui as principais configurações que utilizamos para programar.;https://marketplace.visualstudio.com/items?itemName=Labelo.vswextentionpack
+API; API é um conjunto de rotinas e padrões de programação para acesso a um aplicativo de software ou plataforma baseado na Web. A sigla API refere-se ao termo em inglês "Application Programming Interface" que significa em tradução para o português "Interface de Programação de Aplicativos".
