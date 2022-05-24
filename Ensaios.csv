@@ -1,6 +1,6 @@
 Palavra;Descrição
 Versão;Consiste em identificar, através do software fornecido pelo cliente, se a versão do equipamento corresponde a versão que consta na documentação.
 Hash;É um método matemático que transforma qualquer bloco de dados em uma série de caracteres de comprimento fixo (ex: SHA256, SHA1...).
-Integridade;Identificar se o arquivo binário, enviado pelo cliente, corresponde com aquivo carregado no equipamento, procedimento feito através da leitura de hash.
-Exatidão dos algoritimos e funções de medição;Realizar a medição do equipamento na bancada (ensaio feito no laboratório de medidores).
-Influência da interface de entrada de dados;Durante a medição do equipamento em bancada, enviamos dados pelo software Sociedade Serial (buffer overflow). 
+Integridade;Identificar se o arquivo binário, enviado pelo cliente, corresponde com arquivo carregado no equipamento, procedimento feito através da leitura de hash.
+Exatidão dos algoritmos e funções de medição;Realizar a medição do equipamento na bancada (ensaio feito no laboratório de medidores).
+Influência da interface de entrada de dados;Durante a medição do equipamento em bancada, enviamos dados aleatórios em curtos intervalos de tempo (buffer overflow) e avaliamos a influência na medição. 
