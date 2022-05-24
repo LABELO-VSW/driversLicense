@@ -4,10 +4,12 @@
     /* --ensaios-text: RGB(255, 224, 102); */ 
     --equipamentos-bg: RGB(21, 55, 130);
     /* --equipamentos-text: RGB(219, 162, 39); */
-    --prog-bg: RGB(0, 104, 0);
+    --prog-bg: RGB(134, 142, 150);
     /* --prog-text: RGB(177, 238, 175); */
     --set-bg: RGB(86, 61, 124);
     /* --set-text: rgba(254, 228, 255, 0.863); */
+    --norm-bg: RGB(0, 110, 109);
+    --flux-bg: RGB(169, 117, 79);
     --text: white;
 }
 
@@ -94,6 +96,16 @@ h1{
     color: var(--text);
 }
 
+.NormsTitle{
+    background-color: var(--norm-bg);
+    color: var(--text);
+}
+
+.FluxTitle{
+    background-color: var(--flux-bg);
+    color: var(--text);
+}
+
 .GlossarioTitle{
     background: rgba(0, 38, 124, 0.9);
     color: whitesmoke !important;
@@ -162,3 +174,12 @@ h1{
     
 }
 
+.table-normas tr th{
+    background-color: var(--norm-bg);
+    color: var(--text);
+}
+
+.table-fluxogramas tr th{
+    background-color: var(--flux-bg);
+    color: var(--text);
+}

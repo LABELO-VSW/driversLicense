@@ -41,6 +41,14 @@
           let data = csvToHTML(success, "table table-setores")
           document.getElementById('quentura4').innerHTML += data
       })
+      $.get('./Normas.csv', (success) => { // Programação
+          let data = csvToHTML(success, "table table-normas")
+          document.getElementById('quentura5').innerHTML += data
+      })
+      //$.get('./Fluxogramas.csv', (success) => { // Programação
+       //   let data = csvToHTML(success, "table table-fluxogramas")
+        //  document.getElementById('quentura6').innerHTML += data
+      //})
 
       function csvToHTML(csv, c) {
           console.log(csv)
@@ -75,7 +83,7 @@
         <img
           href="#"
           class="himg"
-          onclick="changeVisibility(['home'], ['quentura', 'quentura2', 'quentura3', 'quentura4'])"
+          onclick="changeVisibility(['home'], ['quentura', 'quentura2', 'quentura3', 'quentura4', 'quentura5','quentura6'])"
           src="./assets/Logo LABELO_branco natal.png"
           alt="Logo Labelo"
           width="100"
@@ -106,7 +114,7 @@
         </p>
 
         <div class="row" style="margin-top: 25px">
-          <div class="col-3">
+          <div class="col-4">
             <a href="#" onclick="changeVisibility(['quentura'], ['home'])">
               <div class="card text-dark bg-light" style="width: 100%">
                 <h5 class="card-title EnsaiosTitle">Ensaios</h5>
@@ -121,7 +129,7 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <a href="#" onclick="changeVisibility(['quentura2'], ['home'])">
               <div class="card bg-light text-dark" style="width: 100%">
                 <h5 class="card-title EquipsTitle">Equipamentos</h5>
@@ -134,7 +142,7 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <a href="#" onclick="changeVisibility(['quentura3'], ['home'])">
               <div class="card bg-light text-dark" style="width: 100%">
                 <h5 class="card-title ProgTitle">Programação</h5>
@@ -147,7 +155,33 @@
               </div>
             </a>
           </div>
-          <div class="col-3">
+        </div>
+        <div class="row" style="margin-top: 25px;">
+          <div class="col-4">
+            <a href="#" onclick="changeVisibility(['quentura5'], ['home'])">
+              <div class="card bg-light text-dark" style="width: 100%">
+                <h5 class="card-title NormsTitle">Normas</h5>
+                <div class="card-body">
+                  <p class="card-text">
+                    Resumo das principais normas que orientam o laboratório.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="#" onclick="changeVisibility(['quentura6'], ['home'])">
+              <div class="card bg-light text-dark" style="width: 100%">
+                <h5 class="card-title FluxTitle">Fluxogramas</h5>
+                <div class="card-body">
+                  <p class="card-text">
+                    Fluxogramas que ilustram os processos do laboratório.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
             <a href="#" onclick="changeVisibility(['quentura4'], ['home'])">
               <div class="card bg-light text-dark" style="width: 100%">
                 <h5 class="card-title SetoresTitle">Setores</h5>
@@ -160,8 +194,8 @@
               </div>
             </a>
           </div>
-        </div>
       </div>
+    </div>
 
       <div id="quentura" class="pagina" style="visibility: collapse">
         <h1 class="EnsaiosTitle">Ensaios</h1>
@@ -174,6 +208,24 @@
       </div>
       <div id="quentura4" class="pagina" style="visibility: collapse">
         <h1 class="SetoresTitle">Setores</h1>
+      </div>
+      <div id="quentura5" class="pagina" style="visibility: collapse">
+        <h1 class="NormsTitle">Normas</h1>
+      </div>
+      <div id="quentura6" class="pagina" style="visibility: collapse">
+        <h1 class="FluxTitle">Fluxogramas</h1>
+        <body>
+          <img
+        src="fluxo-software.svg"
+        alt="Esse software é autêntico."
+        srcset=""
+      />
+      <img
+        src="work-flow.svg"
+        alt="Esse software é autêntico."
+        srcset=""
+      />
+        </body>
       </div>
     </div>
     <div class="footer">
