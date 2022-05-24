@@ -1,255 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Guia de VSW</title>
 
-    <script>
-      $.get('./Ensaios.csv', (success) => { // Ensaios
-          let data = csvToHTML(success, "table table-ensaios");
-          document.getElementById('quentura').innerHTML += data;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Guia de VSW</title>
+
+  <script>
+    $.get('./Ensaios.csv', (success) => { // Ensaios
+      let data = csvToHTML(success, "table table-ensaios");
+      document.getElementById('quentura').innerHTML += data;
+    })
+
+    $.get('./Equipamentos.csv', (success) => { // Equipamentos
+      let data = csvToHTML(success, "table table-equipamentos")
+      document.getElementById('quentura2').innerHTML += data
+    })
+    $.get('./Programação.csv', (success) => { // Programação
+      let data = csvToHTML(success, "table table-programacao")
+      document.getElementById('quentura3').innerHTML += data
+    })
+    $.get('./Setores.csv', (success) => { // Programação
+      let data = csvToHTML(success, "table table-setores")
+      document.getElementById('quentura4').innerHTML += data
+    })
+    $.get('./Normas.csv', (success) => { // Programação
+      let data = csvToHTML(success, "table table-normas")
+      document.getElementById('quentura5').innerHTML += data
+    })
+    //$.get('./Fluxogramas.csv', (success) => { // Programação
+    //   let data = csvToHTML(success, "table table-fluxogramas")
+    //  document.getElementById('quentura6').innerHTML += data
+    //})
+
+    function csvToHTML(csv, c) {
+      console.log(csv)
+      return `<table class="${c}">${csv.split('\n').filter(e => e !== "").map((e, i) => {
+        if (i > 0) {
+          let td = e.split(';')
+          if (td.length > 2) {
+            console.log(td)
+            return `<a href="${td[2]}"><tr class="withLink"><td><a href="${td[2]}">${td.filter((e, i) => i < 2).join(`</a></td><td><a href="${td[2]}">`)}</a></td></tr></a>`
+          } else {
+            return `<tr><td>${e.split(';').join('</td><td>')}</td></tr>`
+          }
+        } else {
+          return `<tr><th>${e.split(';').join('</th><th>')}</th></tr>`
+        }
+      }).join("")}</table>`
+    }
+    function changeVisibility(set, remove) {
+      remove.map(e => {
+        document.getElementById(e).style.visibility = "collapse"
       })
-
-      $.get('./Equipamentos.csv', (success) => { // Equipamentos
-          let data = csvToHTML(success, "table table-equipamentos")
-          document.getElementById('quentura2').innerHTML += data
+      set.map(e => {
+        document.getElementById(e).style.visibility = "visible"
       })
-      $.get('./Programação.csv', (success) => { // Programação
-          let data = csvToHTML(success, "table table-programacao")
-          document.getElementById('quentura3').innerHTML += data
-      })
-      $.get('./Setores.csv', (success) => { // Programação
-          let data = csvToHTML(success, "table table-setores")
-          document.getElementById('quentura4').innerHTML += data
-      })
-      $.get('./Normas.csv', (success) => { // Programação
-          let data = csvToHTML(success, "table table-normas")
-          document.getElementById('quentura5').innerHTML += data
-      })
-      //$.get('./Fluxogramas.csv', (success) => { // Programação
-       //   let data = csvToHTML(success, "table table-fluxogramas")
-        //  document.getElementById('quentura6').innerHTML += data
-      //})
+    }
+  </script>
+</head>
 
-      function csvToHTML(csv, c) {
-          console.log(csv)
-          return `<table class="${c}">${csv.split('\n').filter(e=>e!=="").map((e, i) => {
-              if (i > 0) {
-                  let td = e.split(';')
-                  if (td.length > 2) {
-                      console.log(td)
-                      return `<a href="${td[2]}"><tr class="withLink"><td><a href="${td[2]}">${td.filter((e, i) => i < 2).join(`</a></td><td><a href="${td[2]}">`)}</a></td></tr></a>`
-                  } else {
-                      return `<tr><td>${e.split(';').join('</td><td>')}</td></tr>`
-                  }
-              } else {
-                  return `<tr><th>${e.split(';').join('</th><th>')}</th></tr>`
-              }
-          }).join("")}</table>`
-      }
-      function changeVisibility(set, remove) {
-          remove.map(e=>{
-              document.getElementById(e).style.visibility = "collapse"
-          })
-          set.map(e=>{
-              document.getElementById(e).style.visibility = "visible"
-          })
-      }
-    </script>
-  </head>
+<body class="bg-white">
+  <div class="container">
+    <div class="header">
+      <img href="#" class="himg"
+        onclick="changeVisibility(['home'], ['quentura', 'quentura2', 'quentura3', 'quentura4', 'quentura5','quentura6'])"
+        src="./assets/Logo LABELO_branco.png" alt="Logo Labelo" width="100" height="auto" style="left: 50px" />
+      <img class="himg" src="./assets/PUCRS - Todo Branco.png" alt="Logo Puc" width="100" height="auto"
+        style="right: 50px; padding-top: 10px" />
+    </div>
 
-  <body class="bg-white">
-    <div class="container">
-      <div class="header">
-        <img
-          href="#"
-          class="himg"
-          onclick="changeVisibility(['home'], ['quentura', 'quentura2', 'quentura3', 'quentura4', 'quentura5','quentura6'])"
-          src="./assets/Logo LABELO_branco.png"
-          alt="Logo Labelo"
-          width="100"
-          height="auto"
-          style="left: 50px"
-        />
-        <img
-          class="himg"
-          src="./assets/PUCRS - Todo Branco.png"
-          alt="Logo Puc"
-          width="100"
-          height="auto"
-          style="right: 50px; padding-top: 10px"
-        />
-      </div>
+    <div class="pagina" id="home" style="visibility: visible;">
+      <h1 class="GlossarioTitle bg-dark text-light">Guia rápido</h1>
+      <p class="introduction text-dark">
+        Bem-vindo(a) ao <b>melhor laboratório de Verificação de Software da história do Labelo</b>! Este documento
+        colaborativo foi elaborado para ser o teu melhor amigo no início de
+        jornada conosco.
+      </p>
+      <p class="introduction text-dark">
+        Aqui tu encontra os principais termos utilizados na rotina do
+        laboratório de VSW. Então, pra não te perder, mantém o
+        guia por perto e consulta sempre que precisar!
+      </p>
 
-      <div class="pagina" id="home" style="visibility: visible;">
-        <h1 class="GlossarioTitle bg-dark text-light">Guia rápido</h1>
-        <p class="introduction text-dark">
-          Bem-vindo(a) ao <b>melhor laboratório de Verificação de Software da história do Labelo</b>! Este documento
-          colaborativo foi elaborado para ser o teu melhor amigo no início de
-          jornada conosco.
-        </p>
-        <p class="introduction text-dark">
-          Aqui tu encontra os principais termos utilizados na rotina do
-          laboratório de VSW. Então, pra não te perder, mantém o
-          guia por perto e consulta sempre que precisar!
-        </p>
-
-        <div class="row" style="margin-top: 25px">
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura'], ['home'])">
-              <div class="card text-dark bg-light" style="width: 100%">
-                <h5 class="card-title EnsaiosTitle">Ensaios</h5>
-                <div class="card-body">
-                  <div>
-                    <p class="card-text">
-                      Descrição de termos e palavras relacionadas aos principais
-                      ensaios do laboratório.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura2'], ['home'])">
-              <div class="card bg-light text-dark" style="width: 100%">
-                <h5 class="card-title EquipsTitle">Equipamentos</h5>
-                <div class="card-body">
+      <div class="row" style="margin-top: 25px">
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura'], ['home'])">
+            <div class="card text-dark bg-light" style="width: 100%">
+              <h5 class="card-title EnsaiosTitle">Ensaios</h5>
+              <div class="card-body">
+                <div>
                   <p class="card-text">
                     Descrição de termos e palavras relacionadas aos principais
-                    equipamentos usados no laboratório.
+                    ensaios do laboratório.
                   </p>
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura3'], ['home'])">
-              <div class="card bg-light text-dark" style="width: 100%">
-                <h5 class="card-title ProgTitle">Programação</h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    Descrição de termos e palavras relacionadas a linguagens de
-                    programação e softwares usados no laboratório.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
-        <div class="row" style="margin-top: 25px;">
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura5'], ['home'])">
-              <div class="card bg-light text-dark" style="width: 100%">
-                <h5 class="card-title NormsTitle">Normas</h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    Resumo das principais normas que orientam o laboratório.
-                  </p>
-                </div>
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura2'], ['home'])">
+            <div class="card bg-light text-dark" style="width: 100%">
+              <h5 class="card-title EquipsTitle">Equipamentos</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Descrição de termos e palavras relacionadas aos principais
+                  equipamentos usados no laboratório.
+                </p>
               </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura6'], ['home'])">
-              <div class="card bg-light text-dark" style="width: 100%">
-                <h5 class="card-title FluxTitle">Fluxogramas</h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    Fluxogramas que ilustram os processos do laboratório.
-                  </p>
-                </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura3'], ['home'])">
+            <div class="card bg-light text-dark" style="width: 100%">
+              <h5 class="card-title ProgTitle">Programação</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Descrição de termos e palavras relacionadas a linguagens de
+                  programação e softwares usados no laboratório.
+                </p>
               </div>
-            </a>
-          </div>
-          <div class="col-4">
-            <a href="#" onclick="changeVisibility(['quentura4'], ['home'])">
-              <div class="card bg-light text-dark" style="width: 100%">
-                <h5 class="card-title SetoresTitle">Setores</h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    Descrição de termos e palavras relacionadas aos principais
-                    setores relacionados ao nosso.
-                  </p>
-                </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 25px;margin-bottom:-30px;">
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura5'], ['home'])">
+            <div class="card bg-light text-dark" style="width: 100%">
+              <h5 class="card-title NormsTitle">Normas</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Resumo das principais normas que orientam o laboratório.
+                </p>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura6'], ['home'])">
+            <div class="card bg-light text-dark" style="width: 100%">
+              <h5 class="card-title FluxTitle">Fluxogramas</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Fluxogramas que ilustram os processos do laboratório.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="#" onclick="changeVisibility(['quentura4'], ['home'])">
+            <div class="card bg-light text-dark" style="width: 100%">
+              <h5 class="card-title SetoresTitle">Setores</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Descrição de termos e palavras relacionadas aos principais
+                  setores relacionados ao nosso.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
-      <div id="quentura" class="pagina" style="visibility: collapse">
-        <h1 class="EnsaiosTitle">Ensaios</h1>
-      </div>
-      <div id="quentura2"  class="pagina" style="visibility: collapse">
-        <h1 class="EquipsTitle">Equipamentos</h1>
-      </div>
-      <div id="quentura3" class="pagina" style="visibility: collapse">
-        <h1 class="ProgTitle">Programação</h1>
-      </div>
-      <div id="quentura4" class="pagina" style="visibility: collapse">
-        <h1 class="SetoresTitle">Setores</h1>
-      </div>
-      <div id="quentura5" class="pagina" style="visibility: collapse">
-        <h1 class="NormsTitle">Normas</h1>
-      </div>
-      <div id="quentura6" class="pagina" style="visibility: collapse">
-        <h1 class="FluxTitle">Fluxogramas</h1>
-        <br>
-          <h2>
-            Fluxo de entrada de amostras
-          </h2>
-          <p>
-          Abaixo está apresentado o caminho que uma amostra de software percorre no funcionamento padrão do laboratório.
-        </p>
-          <img
-        src="fluxo-software.svg"
-        width="1100px"
-        height="800px"
-        alt=""
-        srcset=""
-      />
+    <div id="quentura" class="pagina" style="visibility: collapse">
+      <h1 class="EnsaiosTitle">Ensaios</h1>
+    </div>
+    <div id="quentura2" class="pagina" style="visibility: collapse">
+      <h1 class="EquipsTitle">Equipamentos</h1>
+    </div>
+    <div id="quentura3" class="pagina" style="visibility: collapse">
+      <h1 class="ProgTitle">Programação</h1>
+    </div>
+    <div id="quentura4" class="pagina" style="visibility: collapse">
+      <h1 class="SetoresTitle">Setores</h1>
+    </div>
+    <div id="quentura5" class="pagina" style="visibility: collapse">
+      <h1 class="NormsTitle">Normas</h1>
+    </div>
+    <div id="quentura6" class="pagina" style="visibility: collapse">
+      <h1 class="FluxTitle">Fluxogramas</h1>
+      <br>
       <h2>
-      </br>
-      </br>
+        Fluxo de entrada de amostras
+      </h2>
+      <p>
+        Abaixo está apresentado o caminho que uma amostra de software percorre no funcionamento padrão do laboratório.
+      </p>
+      <img src="fluxo-software.svg" width="1100px" height="800px" alt="" srcset="" />
+      <h2>
+        </br>
+        </br>
         Fluxo de trabalho
       </h2>
-      <p>Abaixo está descrito o fluxo de trabalho de VSW, onde se percebe também como conversam as divisões de ensaios funcionais e análise documental/de código fonte.</p>
-      <img
-        src="work-flow.svg"
-        width="700px"
-        height="800px"
-        alt="Esse software é autêntico."
-        srcset=""
-      />
-        </body>
-      </div>
+      <p>Abaixo está descrito o fluxo de trabalho de VSW, onde se percebe também como conversam as divisões de ensaios
+        funcionais e análise documental/de código fonte.</p>
+      <img src="work-flow.svg" width="700px" height="800px" alt="Esse software é autêntico." srcset="" />
     </div>
-    <div class="footer">
-      <img
-        src="./assets/flamingo.gif"
-        alt="Esse software é autêntico."
-        srcset=""
-      />
-    </div>
-  </body>
+  </div>
+</body>
+
+<div class="footer">
+  <img src="./assets/flamingo.gif" alt="Esse software é autêntico." srcset="" />
+</div>
+</body>
+
 </html>
