@@ -3,4 +3,9 @@ Versão;Consiste em identificar, através do software fornecido pelo cliente, se
 Hash;É um método matemático que transforma qualquer bloco de dados em uma série de caracteres de comprimento fixo (ex: SHA256, SHA1...).
 Integridade;Identificar se o arquivo binário, enviado pelo cliente, corresponde com arquivo carregado no equipamento, procedimento feito através da leitura de hash.
 Exatidão dos algoritmos e funções de medição;Realizar a medição do equipamento na bancada (ensaio feito no laboratório de medidores).
-Influência da interface de entrada de dados;Durante a medição do equipamento em bancada, enviamos dados aleatórios em curtos intervalos de tempo (buffer overflow) e avaliamos a influência na medição. 
+Influência da interface de entrada de dados;Durante a medição do equipamento em bancada, enviamos dados aleatórios em curtos intervalos de tempo (ataque "buffer overflow") e avaliamos a influência na medição. 
+DLMS;Sigla de Device Language Message Specification, é um padrão de comunicação para medidores de energia que organiza dados em objetos para troca destes entre dispositivos.
+COSEM;Sigla de Companion Specification for Energy Metering, inclui uma série de especificações que definem as camadas de transporte e aplicação do protocolo DLMS.
+Casos de teste;Bateria de ensaios executados pelo próprio cliente (fabricante), que devem ser replicados pelo laboratório acreditado (LABELO) para que possam ser considerados validados.
+Modo de fábrica;Configuração com ampla permissão de alteração de parâmetros relevantes. Essa configuração costuma ser implementada para uso exclusivo em fábrica/pelo fabricante ou laboratório acreditado.
+
