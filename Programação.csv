@@ -3,4 +3,13 @@ ClickUP;Plataforma em que organizamos os ensaios ativos e processos que estão e
 GitHub;Plataforma onde compartilhamos os códigos que estamos desenvolvelvendo. ;https://github.com/
 VScode;Editor de texto. Software que utilizamos para programar e registrar resultados de ensaio.;https://code.visualstudio.com/
 Extensão "VSW Essentials";Extensão no VScode que possui as principais configurações que utilizamos para programar.;https://marketplace.visualstudio.com/items?itemName=Labelo.vswextentionpack
-API; API é um conjunto de rotinas e padrões de programação para acesso a um aplicativo de software ou plataforma baseado na Web. A sigla API refere-se ao termo em inglês "Application Programming Interface" que significa em tradução para o português "Interface de Programação de Aplicativos".
+API;API é um conjunto de rotinas e padrões de programação para acesso a um aplicativo de software ou plataforma baseado na Web. A sigla API refere-se ao termo em inglês "Application Programming Interface" que significa em tradução para o português "Interface de Programação de Aplicativos".
+JSON;É um formato adotado para troca de dados entre sistemas. Tipicamente um arquivo .json contém as informações organizadas no formato atributo-valor. A sigla corresponde a "JavaScript Object Notation".
+Markdown;Linguagem de marcação simples mas poderosa para escrever documentos formatados. Amplamente compatível com HTML, é em Markdown que escrevemos a maioria dos docs de VSW.
+HTML;Linguagem de marcação usada na construção de páginas web. Os navegadores interpretam documentos HTML. Em nossos relatórios, muitas tags HTML são úteis quando combinadas com Markdown.
+CSS;Mecanismo para estilizar um documento. Foi usado em diversos projetos de VSW, inclusive este guia!
+JavaScript;Linguagem de programação interpretada estruturada utilizada principalmente na implementação de rotinas em páginas web. Em VSW, foi utilizada em projetos de desenvolvimento tanto de aplicativos quanto de ferramentas de comunicação.
+Python;Linguagem de programação útil para implementar automações, ferramentas de comunicação, tratar dados e fazer análises estatísticas. Sua principal vantagem é a vasta quantidade de bibliotecas disponíveis que já abreviam muitas tarefas.
+Cliente-Servidor;Arquitetura que estrutura o sistema como um conjunto de processos cooperativos (servidores) que oferecem serviços aos processos de usuário (cliente). Em VSW, foi desenvolvido um servidor à parte para análise de código-fonte.
+Raspberry Pi;Mini-computador com componentes integrados, capaz de executar várias funções. Em VSW, uma Rasp Pi 4 foi utilizada para implementação de automatizações de ensaios, já que é bem mais portátil que um notebook.
+Arduino;Placa projetada com microcontrolador, útil para implementação de rotinas e automatizações. Essencialmente é programada com C/C++ e em VSW foi utilizada em projetos de automatização.
