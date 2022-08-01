@@ -1,6 +1,6 @@
 Palavra;Descrição
 ABNT NBR 14522;Norma que regulamenta a comunicação com medidores de energia. É referência para montar frames de envio (comandos) e resposta esperada em comunicação ABNT.
 ABNT NBR 16968:2022;Norma que padroniza a comunicação entre medidores de energia baseada no protocolo DLMS.
-Portaria INMETRO 221/2022 (antiga 586);Aprova o regulamento técnico metrológico de software para medidores de energia elétrica. Este documento norteia nossa avaliação de conformidade.
-Portaria INMETRO 544/2014;Aprova o regulamento técnico metrológico de software para medidores de velocidade. No anexo A estão os requisitos de software para que o instrumento possa ser considerado conforme.
+Portaria INMETRO 221/2022 (antiga 586);Aprova o regulamento técnico metrológico de software para medidores de energia elétrica. Este documento norteia nossa avaliação de conformidade.;http://www.inmetro.gov.br/legislacao/rtac/pdf/RTAC001928.pdf
+Portaria INMETRO 544/2014;Aprova o regulamento técnico metrológico de software para medidores de velocidade. No anexo A estão os requisitos de software para que o instrumento possa ser considerado conforme.;http://www.inmetro.gov.br/legislacao/rtac/pdf/RTAC002192.pdf
 NIT-Sinst-020;Protocolo de comunicação serial para verificação de Integridade de Software em Instrumentos de Medição.
