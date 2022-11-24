@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: monospace !important; 
+}
+
+.header{
+    position: fixed;
+    top: 0;
+}
+
+.table_glossario{
+    margin-inline: 5rem;
+    margin-top: 6rem;
+    width: 90vw;
+}
+
+.title_table {
+    color: var(--white-color);
+    font-size: 16pt;
+}
+
+.title_palavra{
+    padding-inline: 5rem;
+}
+
+.title_descricao{
+    text-align: center;
+
+}
+.table_glossario tr:nth-child(odd) td{
+    background-color: RGB(216, 222, 233);
+}
+
+.palavra{
+    font-size: 11pt;
+    text-align: center;
+    padding-inline: 1rem;
+}
+
+.descricao{
+    font-size: 11pt;
+    padding-inline: 3rem;
+    text-align: justify;
+    text-indent: 15px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem ;
+}
+

@@ -1,0 +1,7 @@
+.header, .input_search, footer{
+    background-color:  var(--equipamentos-bg);
+}
+
+.title_table {
+    background-color: var(--equipamentos-bg);
+}

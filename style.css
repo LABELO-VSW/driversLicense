@@ -10,45 +10,92 @@
     /* --set-text: rgba(254, 228, 255, 0.863); */
     --norm-bg: RGB(0, 110, 109);
     --flux-bg: RGB(169, 117, 79);
+    --srch-bg: RGB(25, 118, 210);
     --text: white;
 }
 
 *{
     font-family: monospace !important;
+    margin: 0;
+    padding: 0;
 }
 .introduction{
+    color: rgba(0, 0, 0, 0.8);
     font-size: 15pt;
     text-align: justify;
     text-indent: 20px;
+    width: 100vw;
 
 }
 
-
 h1{
     text-align: center;
-    font-size: 36pt;
+    font-size: 28pt;
     font-weight: bold;
     width: 100vw;
     left: 0;
     position: absolute;
     z-index: -1;
-    padding-bottom: 35px;
-    padding-top: 25px;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
     top:0
 }
+h2{
+    padding-top: 2px;
+}
+
+
 
 .header{
-    width: 100%;
+    width: 100vw;
+    margin:0;
+    padding: 0;
+   
 }
 
 .himg{
     position: absolute;
-    top: 35px;
+    top: 15px;
     cursor: pointer;
+}
+.himgPUCRS img{
+    width: 300px;
+    bottom: 0;
+    position: relative;
+    align-content: start;
+}
+
+input{
+    border: 1px none;
+    padding: 7px !important;
+    width: 13.5vw;
+    height: 6vh;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 3rem;
+    top: 10px;
+    
+  
 }
 
 .container a{
     text-decoration: none;
+    position: relative;
+    display: flex;
+    
+  
+  
+
+}
+
+body{
+
+    width: 100vw;
+    
 }
 
 
@@ -58,6 +105,7 @@ h1{
     padding: 5px !important;
     font-weight: bold;
     text-align: center;
+    border-radius: 12px 12px 0px 0px;
 }
 
 .card-body{
@@ -66,7 +114,9 @@ h1{
 }
 
 .pagina {
-    margin-top: 150px;
+    margin-top: 6rem;
+    width: 100vw;
+
 }
 .pagina:not([style*='visibility: visible;']),
 .pagina:not([style*='visibility: visible;']) *
@@ -74,9 +124,12 @@ h1{
     height: 0px !important;
     min-height: 0px !important;
     margin-top: 0px !important;
-
 }
 
+.pesquisa_table th{
+    background-color: var(--srch-bg);
+    color: whitesmoke;
+}
 .EnsaiosTitle{
     background: var(--ensaios-bg);
     color: var(--text);
@@ -108,13 +161,21 @@ h1{
     color: var(--text);
 }
 
+.SrchTitle{
+    background-color: var(--srch-bg);
+    color: var(--text);
+}
+
 .GlossarioTitle{
-    background: rgba(0, 38, 124, 0.9);
+    
+    background-color: #1976D2;
     color: whitesmoke !important;
+   
 }
 
 .card{
     height: 130px;
+    border-radius: 12px;
 }
 
 .table{
@@ -137,8 +198,6 @@ h1{
 .table{
     border-collapse: collapse;
 }
-
-
 
 .table tr:nth-child(odd) td{
     background-color: RGB(216, 222, 233);
@@ -164,11 +223,9 @@ h1{
     color: var(--text);
 }
 
-.footer img{
-    width: 50px;
-    position: fixed;
-    right: 15px;
-    bottom: 0;
+.table-search tr th{
+    background-color: var(--srch-bg);
+    color: var(--text);
 }
 
 .table-equipamentos{
@@ -185,3 +242,149 @@ h1{
     background-color: var(--flux-bg);
     color: var(--text);
 }
+
+footer {
+    background-color: #1976D2;
+    width: 100vw;
+    height: 80px;
+    border-radius: 40rem 0px 0px 0px ;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 38px;
+    bottom: 0;
+    border: none;
+
+    margin-top: 30px;
+}
+
+.grid {
+    text-align: center;
+}
+
+.ramais{
+    color: #FFFFFF;
+    font-family:monospace;
+    font-size: 12pt;
+    align-self: center;
+    padding-bottom: 8px;
+}
+
+.flamingo img{
+    width: 100px;
+    height: 74px;
+    position: fixed;
+    right: 15px;
+    bottom: 0;
+}
+
+html {
+    font-family: "Helvetica Neue", sans-serif;
+    width: 100%;
+    color: #666666;
+    text-align: center;
+   
+    
+}
+
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px none;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+}
+
+.popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+
+}
+
+.popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+}
+
+.popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+}
+
+button {
+    right: 5px;
+    margin: 8px 1px 10px 1rem;
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #0177FB;
+    border: 1px solid #FFFFFF;
+
+}
+
+.btn-outline-primary{
+    font-size: 13px;
+    padding: 0.30rem;
+    position:absolute;
+    top: 2px;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+
+    border: 1px none;
+    width: 4.5rem;
+    height: 2.3rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    right: 10rem;
+}
+
+.btn-outline-primary:hover {
+    border: 1px solid #0177FB;
+    background: #0177FB;
+    color: #FFFFFF;
+    transition: 0.1s;
+    opacity: 0.8;
+
+    font-size: 13px;
+    padding: 0.30rem;
+    position:absolute;
+    top: 2px;
+    border-radius: 0.5rem;
+    width: 4rem;
+    height: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.close{
+    padding: 2px 8px 2px 8px;
+    border-radius: 45%;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #0177FB;
+    color:rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: 10px;
+    
+
+}
+
+.close:hover {
+    border: 1px solid #0177FB;
+    background-color: #0177FB;
+    color: #FFFFFF;
+    opacity: 0.8;
+    right: 10px;
+
+   
+}
+

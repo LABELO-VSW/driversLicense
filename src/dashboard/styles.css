@@ -1,0 +1,232 @@
+:root{
+    --black-color: black;
+    --white-color: white;
+    --blue-color: RGB(25, 118, 210); 
+    --ensaios-bg: RGB(210, 105, 30);
+    /* --ensaios-text: RGB(255, 224, 102); */ 
+    --equipamentos-bg: RGB(21, 55, 130);
+    /* --equipamentos-text: RGB(219, 162, 39); */
+    --prog-bg: RGB(134, 142, 150);
+    /* --prog-text: RGB(177, 238, 175); */
+    --set-bg: RGB(86, 61, 124);
+    /* --set-text: rgba(254, 228, 255, 0.863); */
+    --norm-bg: RGB(0, 110, 109);
+    --flux-bg: RGB(169, 117, 79);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: monospace !important;
+    
+}
+
+.header{
+    background-color:var(--blue-color);
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+ 
+}
+
+.title{
+    color: var(--white-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 28pt;
+}
+
+.input_search{
+    background-color:var(--blue-color);
+    border: 2.5px solid var(--white-color);
+    border-radius: 15px;
+    height: 2.5rem;
+    width: 90px;
+    font-size: 12pt;
+    color: var(--white-color);
+    outline: none;
+    padding: 15px;
+
+}
+
+.input_search::placeholder {
+    color:var(--white-color);
+    
+}
+
+.introduction{
+    color: var(--black-color);  
+    font-size: 15pt;
+    text-align: justify;
+    text-indent: 20px;
+    padding-inline: 3.5rem;
+}
+#text1{
+    padding-top: 1.5rem;
+}
+
+a{
+    border: none;
+    
+    text-decoration: none;
+   
+}
+button{
+    border-radius: 12px;
+    border: none;
+}
+.EnsaiosTitle{
+    background: var(--ensaios-bg);
+    color: var(--text);
+  
+}
+
+.EquipsTitle{
+    color: var(--text);
+    background: var(--equipamentos-bg);
+}
+
+.ProgTitle{
+    background-color: var(--prog-bg);
+    color: var(--text);
+
+}
+
+.SetoresTitle{
+    background: RGB(86, 61, 124);
+    color: var(--text);
+}
+
+.NormsTitle{
+    background-color: var(--norm-bg);
+    color: var(--text);
+}
+
+.FluxTitle{
+    background-color: var(--flux-bg);
+    color: var(--text);
+}
+
+.cards{
+    border: none;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 8rem;
+}
+
+.card_ensaio{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 2rem; 
+}
+
+.card_equipamentos{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 2rem;
+}
+
+.card_programacao{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 2rem;
+}
+
+.card_normas{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 2rem;
+}
+
+.card_fluxogramas{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 2rem;
+}
+.card_setores{
+    width: 26vw;
+    height: 22vh;
+    border-radius: 12px;
+    padding-bottom: 5rem;
+}
+
+.card-title{
+    width: 26vw;
+    padding: 5px !important;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+    color: var(--white-color);
+}
+
+.card-body{
+    width: 26vw;
+    height: 13vh;
+    text-align: justify;
+    text-decoration: none;
+    padding: 5px 10px 15px 10px;
+    border-radius: 0px 0px 12px 12px;
+    
+
+}
+
+footer {
+    background-color: var(--blue-color);
+    width: 100%;
+    height: 12vh;
+    border-radius: 0rem 0px 0px 0px ;
+    /* position:fixed !important; */
+    line-height: 6px;
+    margin-top: 35px;
+    box-sizing: border-box;
+}
+
+
+.footer_glossario{
+    display: flex;  
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: var(--white-color);
+    font-family:monospace;
+    font-size: 12pt;
+}
+
+.grid {
+    display: grid;
+    justify-items: center;
+}
+
+.himgPUCRS {
+    position: relative;
+  
+    width: 9rem;
+    height: 2.5rem;
+}
+
+.ramais{
+   
+
+}
+
+.flamingo {
+    width: 80px;
+    height: 60px;
+    position: relative;
+ 
+}
+
+
+
