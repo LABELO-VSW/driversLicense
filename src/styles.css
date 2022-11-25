@@ -5,14 +5,16 @@
 }
 
 .header{
-    position: fixed;
+ 
     top: 0;
 }
 
 .table_glossario{
     margin-inline: 5rem;
-    margin-top: 6rem;
+    margin-top: 2rem;
     width: 90vw;
+    position: relative;
+    overflow: auto;
 }
 
 .title_table {
