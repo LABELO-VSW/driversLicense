@@ -49,3 +49,6 @@
     padding-bottom: 0.5rem ;
 }
 
+.body_content{
+    position: relative;
+}

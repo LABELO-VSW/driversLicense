@@ -10,8 +10,8 @@
     /* --prog-text: RGB(177, 238, 175); */
     --set-bg: RGB(86, 61, 124);
     /* --set-text: rgba(254, 228, 255, 0.863); */
-    --norm-bg: RGB(0, 110, 109);
-    --flux-bg: RGB(169, 117, 79);
+    --flux-bg: RGB(0, 110, 109);
+    --norm-bg: RGB(169, 117, 79);
 }
 
 *{
@@ -31,6 +31,7 @@
     justify-content: space-between;
     padding-inline: 2rem;
 }
+
 
 .title{
     color: var(--white-color);
@@ -94,7 +95,7 @@ button{
 }
 
 .SetoresTitle{
-    background: RGB(86, 61, 124);
+    background:var(--set-bg);
     color: var(--text);
 }
 
@@ -182,18 +183,10 @@ button{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* text-align: center; */
     padding: 12px 10px 3px 10px;
-    /* box-sizing: border-box; */
     border-radius: 40rem 0px 0px 0px;
- 
     position: absolute;
     bottom: 0;
-  
-  
-
-    
-
 }
 
 .footer_info {
@@ -221,6 +214,5 @@ button{
     height: auto;
     justify-self: end;
     grid-column: 3;
-
 }
 

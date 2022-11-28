@@ -1,0 +1,7 @@
+.header, .input_search, .footer_glossario{
+    background-color:  var(--norm-bg);
+}
+
+.title_table {
+    background-color: var(--norm-bg);
+}
