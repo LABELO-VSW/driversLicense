@@ -19,6 +19,7 @@
 
 <body>
   <div class="body_content">
+    <header>
         <div class="header">
             <img href="#" class="himg"
                 src="../../assets/Logo LABELO_branco.png" alt="Logo Labelo" 
@@ -27,61 +28,65 @@
             <input class="input_search" placeholder="Buscar">
         </div>
     </header>
-<table class="table_glossario" id="tabela">
-    <tr class="title_table"><th class="title_palavra">Palavra</th><th class="title_descricao">Descrição</th></tr>
-    <tr>
-        <td class="palavra">Versão</td>
-        <td class="descricao">Consiste em identificar, através do software fornecido pelo cliente,
-           se a versão do equipamento corresponde a versão que consta na documentação</td>  
-         </tr>
-         <tr>
-            <td class="palavra">Hash</td>
-            <td class="descricao">	É um método matemático que transforma 
-              qualquer bloco de dados em uma série de caracteres de comprimento fixo (ex: SHA256, SHA1...).</td>  
-            </tr>
-            <tr>
-                <td class="palavra">Integridade</td>
-                <td class="descricao">	Identificar se o arquivo binário, enviado pelo cliente, 
-                  corresponde com arquivo carregado no equipamento, procedimento feito através da leitura de hash.</td>  
-            </tr>
-            <tr>
-              <td class="palavra">Exatidão de algoritimos e funções de medição</td>
-              <td class="descricao">Realizar a medição do equipamento na bancada (ensaio feito no laboratório de medidores).</td>  
-          </tr>
-          <tr>
-            <td class="palavra">Influência da interface de entrada de dados</td>
-            <td class="descricao">Durante a medição do equipamento em bancada, enviamos dados aleatórios em curtos intervalos de tempo 
-              (ataque "buffer overflow") e avaliamos a influência na medição.</td>  
-        </tr>
+    <main class="content">
+      <table class="table_glossario" id="tabela">
+        <tr class="title_table"><th class="title_palavra">Palavra</th><th class="title_descricao">Descrição</th></tr>
         <tr>
-          <td class="palavra">DLMS</td>
-          <td class="descricao">Sigla de Device Language Message Specification, é um padrão de comunicação para 
-            medidores de energia que organiza dados em objetos para troca destes entre dispositivos.</td>  
-        </tr>
-        <tr>
-          <td class="palavra">COSEM</td>
-          <td class="descricao">Sigla de Companion Specification for Energy Metering, inclui uma série de 
-            especificações que definem as camadas de transporte e aplicação do protocolo DLMS.</td>  
-        </tr>
-        <tr>
-          <td class="palavra">Casos de teste</td>
-          <td class="descricao">Bateria de ensaios executados pelo próprio cliente (fabricante), que devem ser replicados 
-            pelo laboratório acreditado (LABELO) para que possam ser considerados validados.</td>  
-        </tr>
-        <tr>
-          <td class="palavra">Modo de fábrica</td>
-          <td class="descricao">Configuração com ampla permissão de alteração de parâmetros relevantes. Essa configuração costuma ser 
-            implementada para uso exclusivo em fábrica/pelo fabricante ou laboratório acreditado.</td>  
-        </tr>
-  </table>
+            <td class="palavra">Versão</td>
+            <td class="descricao">Consiste em identificar, através do software fornecido pelo 
+              cliente, se a versão do equipamento corresponde a versão que consta na documentação.</td>  
+             </tr>
+             <tr>
+                <td class="palavra">Hash</td>
+                <td class="descricao">É um método matemático que transforma qualquer bloco de dados 
+                  em uma série de caracteres de comprimento fixo (ex: SHA256, SHA1...).</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">Integridade</td>
+                    <td class="descricao">Identificar se o arquivo binário, enviado pelo cliente, 
+                      corresponde com arquivo carregado no equipamento, procedimento feito através da leitura de hash.</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">Exatidão dos algoritimos e funções de medição</td>
+                    <td class="descricao">Realizar a medição do equipamento na bancada (ensaio feito no laboratório de medidores).</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">Influência da interface de entrada de dados</td>
+                    <td class="descricao">Durante a medição do equipamento em bancada, enviamos dados aleatórios em curtos 
+                      intervalos de tempo (ataque "buffer overflow") e avaliamos a influência na medição. </td>  
 
-  <footer class="footer_glossario">
-    <div class="footer_info">
-        <img class="himgPUCRS" src="../../assets/PUCRS - Todo Branco.png" alt="Logo Puc"/>
-        <span class="ramais">Ramal S/F: 8240 | Ramal JC: 8297</span>
-    </div>
-   <img class="flamingo" src="../../assets/flamingo.gif" alt="Esse software é autêntico." srcset=""/>
-</footer>
-</div>
- 
-</body>
+                </tr>
+                <tr>
+                    <td class="palavra">DLMS</td>
+                    <td class="descricao">Sigla de Device Language Message Specification, é um padrão de comunicação para medidores 
+                      de energia que organiza dados em objetos para troca destes entre dispositivos.</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">COSEM</td>
+                    <td class="descricao">Sigla de Companion Specification for Energy Metering, inclui uma série de 
+                      especificações que definem as camadas de transporte e aplicação do protocolo DLMS.</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">Casos de teste</td>
+                    <td class="descricao">Bateria de ensaios executados pelo próprio cliente (fabricante), que devem ser replicados pelo
+                       laboratório acreditado (LABELO) para que possam ser considerados validados.</td>  
+                </tr>
+                <tr>
+                    <td class="palavra">Modo de fábrica</td>
+                    <td class="descricao">Configuração com ampla permissão de alteração de parâmetros relevantes. Essa configuração costuma ser 
+                      implementada para uso exclusivo em fábrica/pelo fabricante ou laboratório acreditado.</td>  
+                </tr>
+      
+      </table>
+    </main>
+    <footer>
+      <div class="footer_glossario">
+              <img href="#" class="himgPUCRS" src="../../assets/PUCRS - Todo Branco.png" alt="Logo Puc" />
+
+          <span class="ramais">Ramal S/F: 8240 | Ramal JC: 8297</span>
+          <img href="#" class="flamingo" src="../../assets/flamingo.gif" alt="Esse software é autêntico." srcset=""/>
+
+      </div>
+    </footer>
+  </div>
+  </body>

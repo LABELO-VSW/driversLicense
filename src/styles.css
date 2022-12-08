@@ -5,16 +5,17 @@
 }
 
 .header{
- 
     top: 0;
+    border: 0;
 }
 
 .table_glossario{
-    margin-inline: 5rem;
+    margin-inline: 4.2rem;
     margin-top: 2rem;
     width: 90vw;
-    position: relative;
     overflow: auto;
+    position: relative;
+    padding: 0;
 }
 
 .title_table {
@@ -23,7 +24,7 @@
 }
 
 .title_palavra{
-    padding-inline: 5rem;
+    text-align: center;
 }
 
 .title_descricao{
@@ -37,7 +38,7 @@
 .palavra{
     font-size: 11pt;
     text-align: center;
-    padding-inline: 1rem;
+
 }
 
 .descricao{
@@ -49,6 +50,4 @@
     padding-bottom: 0.5rem ;
 }
 
-.body_content{
-    position: relative;
-}
+

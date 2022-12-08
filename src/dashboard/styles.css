@@ -8,10 +8,10 @@
     /* --equipamentos-text: RGB(219, 162, 39); */
     --prog-bg: RGB(134, 142, 150);
     /* --prog-text: RGB(177, 238, 175); */
+    --norm-bg: RGB(169, 117, 79);
+    --flux-bg: RGB(0, 110, 109);
     --set-bg: RGB(86, 61, 124);
     /* --set-text: rgba(254, 228, 255, 0.863); */
-    --flux-bg: RGB(0, 110, 109);
-    --norm-bg: RGB(169, 117, 79);
 }
 
 *{
@@ -31,6 +31,8 @@
     justify-content: space-between;
     padding-inline: 2rem;
 }
+
+
 
 
 .title{
@@ -77,6 +79,7 @@ button{
     border-radius: 12px;
     border: none;
 }
+
 .EnsaiosTitle{
     background: var(--ensaios-bg);
     color: var(--text);
@@ -109,14 +112,15 @@ button{
     color: var(--text);
 }
 
+
 .cards{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-inline: 8rem;
-    
-
+    position: relative;
+    transition: 300ms ease-in-out;
 }
 
 .card_ensaio{
@@ -125,6 +129,13 @@ button{
     border-radius: 12px;
     padding-bottom: 2rem; 
 }
+
+.card_ensaio :hover{
+    transform: scale(1.1);
+    background-position: -60px;
+ 
+  }
+
 
 .card_equipamentos{
     width: 26vw;
@@ -157,7 +168,7 @@ button{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 .card-title{
@@ -178,41 +189,52 @@ button{
     border-radius: 0px 0px 12px 12px;
 }
 
-.footer_glossario {
-    background-color: rgb(25, 118, 210);
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 12px 10px 3px 10px;
-    border-radius: 40rem 0px 0px 0px;
+
+.body_content{
     position: absolute;
+}
+
+.content{
+    padding-bottom: 1rem;
+}
+    
+
+
+
+.footer_glossario {
+    background-color:var(--blue-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: block;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    padding: 8px;
     bottom: 0;
+
 }
 
-.footer_info {
-    display: grid;
-    grid-column: 2;
-    gap: 10px;
-}
-
-
-.himgPUCRS {
-    width: 10rem;
+.himgPUCRS{
+    margin: 0;
+    width: 9vw; 
     height: auto;
-    justify-self: center;
 }
 
-
-.ramais {
-    color: #fff;
-    place-self: start center;
-    font-size: 12pt;
+.ramais{
+    color: var(--white-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 13pt;
+    margin: 0;
+    padding: 0;
 }
 
-.flamingo {
-    width: 80px;
-    height: auto;
-    justify-self: end;
-    grid-column: 3;
+.flamingo{
+    padding-top: 0px;
+    margin: 0;
+    width:7vw; 
+    height:auto;
 }
+
 
