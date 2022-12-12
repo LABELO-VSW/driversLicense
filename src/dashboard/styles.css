@@ -16,24 +16,36 @@
 
 *{
     margin:0;
+    border: 0;
     padding: 0;
     font-family: monospace !important;
 }
 
+html, .body_content{
+    height: 100%;
+}
 
-.header{
-    background-color:var(--blue-color);
-    width: 100%;
-    height: 9vh;
-    display: flex;
+.body_content{
+    position: absolute;
+    display: grid;
+    min-height: 100%;
+}
+
+.content{
     position: relative;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 2rem;
 }
 
 
 
+.header-glossario{
+    background-color:var(--blue-color);
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
 
 .title{
     color: var(--white-color);
@@ -53,7 +65,6 @@
     outline: none;
     padding: 15px;
 }
-
 
 .input_search::placeholder {
     color:var(--white-color);
@@ -119,15 +130,13 @@ button{
     flex-wrap: wrap;
     justify-content: space-between;
     padding-inline: 8rem;
-    position: relative;
-    transition: 300ms ease-in-out;
 }
 
 .card_ensaio{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem; 
+
 }
 
 .card_ensaio :hover{
@@ -141,34 +150,33 @@ button{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem;
+
 }
 
 .card_programacao{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem;
+
 }
 
 .card_normas{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem;
 }
 
 .card_fluxogramas{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem;
 }
+
 .card_setores{
     width: 26vw;
     height: 22vh;
     border-radius: 12px;
-    padding-bottom: 2rem;
+ 
 }
 
 .card-title{
@@ -185,39 +193,26 @@ button{
     height: 13vh;
     text-align: justify;
     text-decoration: none;
-    padding: 5px 10px 15px 10px;
+    padding: 5px 10px 5px 10px;
     border-radius: 0px 0px 12px 12px;
 }
 
-
-.body_content{
-    position: absolute;
-}
-
-.content{
-    padding-bottom: 1rem;
-}
     
-
-
-
 .footer_glossario {
     background-color:var(--blue-color);
     width: 100%;
-    height: 100%;
+    height: 7.5rem;
     display: flex;
-    position: block;
     align-items: center;
     justify-content: space-between;
     padding-inline: 2rem;
-    padding: 8px;
-    bottom: 0;
+    position:sticky;
 
 }
 
 .himgPUCRS{
     margin: 0;
-    width: 9vw; 
+    width: 9rem; 
     height: auto;
 }
 
@@ -233,7 +228,7 @@ button{
 .flamingo{
     padding-top: 0px;
     margin: 0;
-    width:7vw; 
+    width:7rem; 
     height:auto;
 }
 
